@@ -3,6 +3,6 @@ A JavaScript version of the Green Rangers Dragon Dagger from The Power Rangers. 
 
 <a href="https://rkcp.github.io/green-ranger/">![Screenshot of page](./pics/page.png)</a>
 
-Controlled with the keys `A` `S` `D` `F`.
+Controlled with the keys `A` `S` `D` `F`. Must use a keyboard so will not work on touch screen devices.
 
 made by @rkcp
