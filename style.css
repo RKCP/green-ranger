@@ -1,0 +1,76 @@
+html {
+  font-size: 10px;
+  background: url(pics/greenrangerback.jpg);
+  background-position: top;
+  background-size: cover;
+  
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.keys {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.key {
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 2rem .5rem;
+  transition: all .07s ease;
+  width: 12rem;
+  height: 12rem;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 .5rem black;
+}
+
+.playing {
+  transform: scale(1.1);
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #ffc600;
+}
+
+.coin {
+  width: 15rem;
+  height: 15rem;
+  background: url(pics/greencoin.png) center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.button1 {
+  background: url(pics/button.png) center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.button2 {
+  background: url(pics/button.png) center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.button3 {
+  background: url(pics/button.png) center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

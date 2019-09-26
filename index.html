@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <div class="keys">
+    <div data-key="65" class="key coin">
+      <kbd></kbd>
+      <span class="sound"></span>
+    </div>
+    <div data-key="83" class="key button1">
+      <kbd></kbd>
+      <span class="sound"></span>
+    </div>
+    <div data-key="68" class="key button2">
+      <kbd></kbd>
+      <span class="sound"></span>
+    </div>
+    <div data-key="70" class="key button3">
+      <kbd></kbd>
+      <span class="sound"></span>
+    </div>
+  </div>
+
+  <audio data-key="65" src="sounds/tommy.mp3"></audio>
+  <audio data-key="83" src="sounds/drag1.mp3"></audio>
+  <audio data-key="68" src="sounds/theme.mp3"></audio>
+  <audio data-key="70" src="sounds/drag2.mp3"></audio>
+
+
+<script>
+  window.addEventListener('keydown', function (event) {
+    const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
+    const key = document.querySelector(`.key[data-key="${event.keyCode}"]`); 
+    // the content inside [this bracket] is known as the attribute selector. 
+    // this means it will only select the keys pressed with data-key
+    // if a key (keycode) is pressed that does not have the 'data-key' it will return null
+
+    if(!audio) return; // this will stop the function if the wrong key is pressed.
+    audio.currentTime = 0; // we want to rewind the audio file each time it is pressed so that we can hit it over and over.
+    audio.play(); // .play() is a built in function that attempts to begin playback of media.
+    key.classList.add('playing'); //add's the class playing when the key is pressed. This will allow the CSS .playing to be activated
+    
+    setTimeout(function() { // this will remove the 'playing' class after 150ms
+      key.classList.remove('playing');  
+    }, 150)
+    
+  });
+
+</script>
+
+
+</body>
+</html>
